@@ -183,14 +183,16 @@ function drawNewCard() {
   const img = document.getElementById('single-img');
   const info = document.getElementById('single-info');
 
+  document.getElementById('single-number').textContent = '';
+  document.getElementById('single-name').textContent = '';
+  document.getElementById('single-keywords').textContent = '';
+  document.getElementById('single-meaning').textContent = '';
+
   card.classList.remove('flipped');
-  info.style.transition = 'none';
   info.classList.add('hidden');
-  requestAnimationFrame(() => { info.style.transition = ''; });
 
   img.src = currentSingle.img;
   img.alt = currentSingle.name;
-
   document.getElementById('single-number').textContent = `${currentSingle.id} — Büyük Arcana`;
   document.getElementById('single-name').textContent = currentSingle.name;
   document.getElementById('single-keywords').textContent = currentSingle.keywords.join('  ·  ');
@@ -210,9 +212,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('single-card').addEventListener('click', () => {
     const card = document.getElementById('single-card').querySelector('.card');
     card.classList.toggle('flipped');
+    const info = document.getElementById('single-info');
     setTimeout(() => {
-      document.getElementById('single-info').classList.toggle('hidden', !card.classList.contains('flipped'));
-    }, 300);
+      if (card.classList.contains('flipped')) {
+        info.classList.remove('hidden');
+      } else {
+        info.classList.add('hidden');
+      }
+    }, 350);
   });
 });
 
