@@ -13,26 +13,26 @@
 <!-- Ana ekran -->
 <div id="main-screen" class="screen active">
     <div class="main-content">
-        <div class="logo">âœ¦ TAROT âœ¦</div>
+        <div class="logo">✦ TAROT ✦</div>
         <div class="tagline">kartlar seni bekliyor</div>
         <div class="btn-group">
-            <button class="btn-primary" onclick="startDaily()">â˜½ GÃ¼nlÃ¼k KartÄ±m</button>
-            <button class="btn-secondary" onclick="startSingle()">Tek Kart Ã‡ek</button>
-            <button class="btn-secondary" onclick="startSpread()">GeÃ§miÅŸ Â· Åžimdi Â· Gelecek</button>
-            <button class="btn-secondary" onclick="startCeltic()">Celtic Cross Â· 10 Kart</button>
+            <button class="btn-primary" onclick="startDaily()">☽ Günlük Kartım</button>
+            <button class="btn-secondary" onclick="startSingle()">Tek Kart Çek</button>
+            <button class="btn-secondary" onclick="startSpread()">Geçmiş · Şimdi · Gelecek</button>
+            <button class="btn-secondary" onclick="startCeltic()">Celtic Cross · 10 Kart</button>
         </div>
     </div>
 </div>
 
-<!-- GÃ¼nlÃ¼k kart -->
+<!-- Günlük kart -->
 <div id="daily-screen" class="screen">
-    <div class="back-btn" onclick="goHome()">â† Geri</div>
+    <div class="back-btn" onclick="goHome()">← Geri</div>
     <div class="single-content">
         <div class="daily-date" id="daily-date"></div>
-        <div class="daily-label">BugÃ¼nÃ¼n KartÄ±</div>
+        <div class="daily-label">Bugünün Kartı</div>
         <div class="card-container" id="daily-card">
             <div class="card">
-                <div class="card-back"><div class="card-back-design">â˜½ âœ¦ â˜½</div></div>
+                <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
                 <div class="card-front"><img id="daily-img" src="" alt=""></div>
             </div>
         </div>
@@ -47,11 +47,11 @@
 
 <!-- Tek kart -->
 <div id="single-screen" class="screen">
-    <div class="back-btn" onclick="goHome()">â† Geri</div>
+    <div class="back-btn" onclick="goHome()">← Geri</div>
     <div class="single-content">
         <div class="card-container" id="single-card">
             <div class="card">
-                <div class="card-back"><div class="card-back-design">â˜½ âœ¦ â˜½</div></div>
+                <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
                 <div class="card-front"><img id="single-img" src="" alt=""></div>
             </div>
         </div>
@@ -61,30 +61,30 @@
             <div class="card-keywords" id="single-keywords"></div>
             <div class="card-meaning" id="single-meaning"></div>
         </div>
-        <button class="btn-primary" onclick="drawNewCard()" style="margin-top:28px">Yeni Kart Ã‡ek</button>
+        <button class="btn-primary" onclick="drawNewCard()" style="margin-top:28px">Yeni Kart Çek</button>
     </div>
 </div>
 
-<!-- ÃœÃ§ kart yayÄ± -->
+<!-- Üç kart yayı -->
 <div id="spread-screen" class="screen">
-    <div class="back-btn" onclick="goHome()">â† Geri</div>
+    <div class="back-btn" onclick="goHome()">← Geri</div>
     <div class="spread-content">
         <div class="spread-cards">
             <div class="spread-slot">
-                <div class="spread-label">GeÃ§miÅŸ</div>
+                <div class="spread-label">Geçmiş</div>
                 <div class="card-container">
                     <div class="card" id="spread-card-0" onclick="flipSpreadCard(0)">
-                        <div class="card-back"><div class="card-back-design">â˜½ âœ¦ â˜½</div></div>
+                        <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
                         <div class="card-front"><img id="spread-img-0" src="" alt=""></div>
                     </div>
                 </div>
                 <div class="spread-card-name" id="spread-name-0" style="opacity:0"></div>
             </div>
             <div class="spread-slot">
-                <div class="spread-label">Åžimdi</div>
+                <div class="spread-label">Şimdi</div>
                 <div class="card-container">
                     <div class="card" id="spread-card-1" onclick="flipSpreadCard(1)">
-                        <div class="card-back"><div class="card-back-design">â˜½ âœ¦ â˜½</div></div>
+                        <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
                         <div class="card-front"><img id="spread-img-1" src="" alt=""></div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="spread-label">Gelecek</div>
                 <div class="card-container">
                     <div class="card" id="spread-card-2" onclick="flipSpreadCard(2)">
-                        <div class="card-back"><div class="card-back-design">â˜½ âœ¦ â˜½</div></div>
+                        <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
                         <div class="card-front"><img id="spread-img-2" src="" alt=""></div>
                     </div>
                 </div>
@@ -102,24 +102,24 @@
             </div>
         </div>
         <div id="spread-meanings" class="spread-meanings"></div>
-        <button class="btn-primary" onclick="drawSpread()">Yeni Yay Ã‡ek</button>
+        <button class="btn-primary" onclick="drawSpread()">Yeni Yay Çek</button>
     </div>
 </div>
 
 <!-- Celtic Cross -->
 <div id="celtic-screen" class="screen">
-    <div class="back-btn" onclick="goHome()">â† Geri</div>
+    <div class="back-btn" onclick="goHome()">← Geri</div>
     <div class="celtic-content">
         <div class="celtic-layout">
-            <!-- HaÃ§ -->
+            <!-- Haç -->
             <div class="celtic-cross-wrap">
                 <div class="celtic-row">
                     <div class="celtic-empty"></div>
                     <div class="celtic-slot">
-                        <div class="celtic-pos-label">TaÃ§</div>
+                        <div class="celtic-pos-label">Taç</div>
                         <div class="card-container cc-card" id="cc-4" onclick="flipCelticCard(4)">
                             <div class="card">
-                                <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                                <div class="card-back"><div class="card-back-design">✦</div></div>
                                 <div class="card-front"><img id="cc-img-4" src="" alt=""></div>
                             </div>
                         </div>
@@ -128,10 +128,10 @@
                 </div>
                 <div class="celtic-row">
                     <div class="celtic-slot">
-                        <div class="celtic-pos-label">GeÃ§miÅŸ</div>
+                        <div class="celtic-pos-label">Geçmiş</div>
                         <div class="card-container cc-card" id="cc-3" onclick="flipCelticCard(3)">
                             <div class="card">
-                                <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                                <div class="card-back"><div class="card-back-design">✦</div></div>
                                 <div class="card-front"><img id="cc-img-3" src="" alt=""></div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                         <div class="celtic-pos-label">Merkez</div>
                         <div class="card-container cc-card" id="cc-0" onclick="flipCelticCard(0)">
                             <div class="card">
-                                <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                                <div class="card-back"><div class="card-back-design">✦</div></div>
                                 <div class="card-front"><img id="cc-img-0" src="" alt=""></div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                         <div class="celtic-pos-label">Gelecek</div>
                         <div class="card-container cc-card" id="cc-5" onclick="flipCelticCard(5)">
                             <div class="card">
-                                <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                                <div class="card-back"><div class="card-back-design">✦</div></div>
                                 <div class="card-front"><img id="cc-img-5" src="" alt=""></div>
                             </div>
                         </div>
@@ -158,10 +158,10 @@
                 <div class="celtic-row">
                     <div class="celtic-empty"></div>
                     <div class="celtic-slot">
-                        <div class="celtic-pos-label">Engel âœ•</div>
+                        <div class="celtic-pos-label">Engel ✕</div>
                         <div class="card-container cc-card" id="cc-1" onclick="flipCelticCard(1)">
                             <div class="card">
-                                <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                                <div class="card-back"><div class="card-back-design">✦</div></div>
                                 <div class="card-front"><img id="cc-img-1" src="" alt=""></div>
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                         <div class="celtic-pos-label">Temel</div>
                         <div class="card-container cc-card" id="cc-2" onclick="flipCelticCard(2)">
                             <div class="card">
-                                <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                                <div class="card-back"><div class="card-back-design">✦</div></div>
                                 <div class="card-front"><img id="cc-img-2" src="" alt=""></div>
                             </div>
                         </div>
@@ -183,22 +183,22 @@
                 </div>
             </div>
 
-            <!-- SÃ¼tun -->
+            <!-- Sütun -->
             <div class="celtic-staff">
                 <div class="celtic-slot">
                     <div class="celtic-pos-label">Sen</div>
                     <div class="card-container cc-card" id="cc-6" onclick="flipCelticCard(6)">
                         <div class="card">
-                            <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                            <div class="card-back"><div class="card-back-design">✦</div></div>
                             <div class="card-front"><img id="cc-img-6" src="" alt=""></div>
                         </div>
                     </div>
                 </div>
                 <div class="celtic-slot">
-                    <div class="celtic-pos-label">Ã‡evre</div>
+                    <div class="celtic-pos-label">Çevre</div>
                     <div class="card-container cc-card" id="cc-7" onclick="flipCelticCard(7)">
                         <div class="card">
-                            <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                            <div class="card-back"><div class="card-back-design">✦</div></div>
                             <div class="card-front"><img id="cc-img-7" src="" alt=""></div>
                         </div>
                     </div>
@@ -207,16 +207,16 @@
                     <div class="celtic-pos-label">Umutlar</div>
                     <div class="card-container cc-card" id="cc-8" onclick="flipCelticCard(8)">
                         <div class="card">
-                            <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                            <div class="card-back"><div class="card-back-design">✦</div></div>
                             <div class="card-front"><img id="cc-img-8" src="" alt=""></div>
                         </div>
                     </div>
                 </div>
                 <div class="celtic-slot">
-                    <div class="celtic-pos-label">SonuÃ§</div>
+                    <div class="celtic-pos-label">Sonuç</div>
                     <div class="card-container cc-card" id="cc-9" onclick="flipCelticCard(9)">
                         <div class="card">
-                            <div class="card-back"><div class="card-back-design">âœ¦</div></div>
+                            <div class="card-back"><div class="card-back-design">✦</div></div>
                             <div class="card-front"><img id="cc-img-9" src="" alt=""></div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
         </div>
 
         <div id="celtic-meanings" class="spread-meanings"></div>
-        <button class="btn-primary" onclick="drawCeltic()" style="margin-top:8px">Yeni YayÄ±lÄ±m</button>
+        <button class="btn-primary" onclick="drawCeltic()" style="margin-top:8px">Yeni Yayılım</button>
     </div>
 </div>
 
