@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<!-- Ana ekran -->
+<div id="main-screen" class="screen active">
+    <div class="main-content">
+        <div class="logo">✦ TAROT ✦</div>
+        <div class="tagline">kartlar seni bekliyor</div>
+        <div class="btn-group">
+            <button class="btn-primary" onclick="startSingle()">Tek Kart Çek</button>
+            <button class="btn-secondary" onclick="startSpread()">Geçmiş · Şimdi · Gelecek</button>
+        </div>
+    </div>
+</div>
+
+<!-- Tek kart -->
+<div id="single-screen" class="screen">
+    <div class="back-btn" onclick="goHome()">← Geri</div>
+    <div class="single-content">
+        <div class="card-container" id="single-card">
+            <div class="card">
+                <div class="card-back">
+                    <div class="card-back-design">☽ ✦ ☽</div>
+                </div>
+                <div class="card-front">
+                    <img id="single-img" src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="single-info" class="card-info hidden">
+            <div class="card-number" id="single-number"></div>
+            <div class="card-name" id="single-name"></div>
+            <div class="card-keywords" id="single-keywords"></div>
+            <div class="card-meaning" id="single-meaning"></div>
+        </div>
+        <button class="btn-primary" id="new-card-btn" onclick="drawNewCard()" style="margin-top:28px">Yeni Kart Çek</button>
+    </div>
+</div>
+
+<!-- Üç kart yayı -->
+<div id="spread-screen" class="screen">
+    <div class="back-btn" onclick="goHome()">← Geri</div>
+    <div class="spread-content">
+        <div class="spread-cards">
+            <div class="spread-slot">
+                <div class="spread-label">Geçmiş</div>
+                <div class="card-container">
+                    <div class="card" id="spread-card-0" onclick="flipSpreadCard(0)">
+                        <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
+                        <div class="card-front"><img id="spread-img-0" src="" alt=""></div>
+                    </div>
+                </div>
+                <div class="spread-card-name" id="spread-name-0" style="opacity:0"></div>
+            </div>
+            <div class="spread-slot">
+                <div class="spread-label">Şimdi</div>
+                <div class="card-container">
+                    <div class="card" id="spread-card-1" onclick="flipSpreadCard(1)">
+                        <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
+                        <div class="card-front"><img id="spread-img-1" src="" alt=""></div>
+                    </div>
+                </div>
+                <div class="spread-card-name" id="spread-name-1" style="opacity:0"></div>
+            </div>
+            <div class="spread-slot">
+                <div class="spread-label">Gelecek</div>
+                <div class="card-container">
+                    <div class="card" id="spread-card-2" onclick="flipSpreadCard(2)">
+                        <div class="card-back"><div class="card-back-design">☽ ✦ ☽</div></div>
+                        <div class="card-front"><img id="spread-img-2" src="" alt=""></div>
+                    </div>
+                </div>
+                <div class="spread-card-name" id="spread-name-2" style="opacity:0"></div>
+            </div>
+        </div>
+        <div id="spread-meanings" class="spread-meanings"></div>
+        <button class="btn-primary" onclick="drawSpread()">Yeni Yay Çek</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
