@@ -179,11 +179,14 @@ function drawNewCard() {
   currentSingle = shuffled[0];
 
   const cardEl = document.getElementById('single-card');
+  const card = cardEl.querySelector('.card');
   const img = document.getElementById('single-img');
   const info = document.getElementById('single-info');
 
-  cardEl.classList.remove('flipped');
+  card.classList.remove('flipped');
+  info.style.transition = 'none';
   info.classList.add('hidden');
+  requestAnimationFrame(() => { info.style.transition = ''; });
 
   img.src = currentSingle.img;
   img.alt = currentSingle.name;
