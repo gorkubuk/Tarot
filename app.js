@@ -1,7 +1,7 @@
 const CARDS = [
   {
     id: 0, name: 'Deli', en: 'The Fool',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/300px-RWS_Tarot_00_Fool.jpg',
+    img: 'images/00_fool.jpg',
     keywords: ['Yeni başlangıç', 'Macera', 'Saf cesaret', 'Özgürlük'],
     meaning: 'Hayatında tamamen yeni bir yolculuk başlıyor. Bilmediğin bir yöne adım atmaya hazırsın ve geçmişin yüklerini bırakmışsın. Saf bir merakla ilerle — bu adım düşündüğünden çok daha güzel sonuçlar doğurabilir.'
   },
@@ -37,7 +37,7 @@ const CARDS = [
   },
   {
     id: 6, name: 'Aşıklar', en: 'The Lovers',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_06_Lovers.jpg/300px-RWS_Tarot_06_Lovers.jpg',
+    img: 'images/06_lovers.jpg',
     keywords: ['Aşk', 'Uyum', 'Seçim', 'Bağlantı'],
     meaning: 'Bu kart yalnızca romantik aşkı değil, kalbinle uyumlu kararlar almayı da simgeler. Değerlerine sadık kal, hem kendinle hem başkalarıyla gerçek bir uyum içinde ol. Önemli bir seçim kapıda olabilir.'
   },
@@ -67,7 +67,7 @@ const CARDS = [
   },
   {
     id: 11, name: 'Adalet', en: 'Justice',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/RWS_Tarot_11_Justice.jpg/300px-RWS_Tarot_11_Justice.jpg',
+    img: 'images/11_justice.jpg',
     keywords: ['Denge', 'Hakikat', 'Dürüstlük', 'Sorumluluk'],
     meaning: 'Attığın adımların ve aldığın kararların sonuçlarını göreceksin. Doğruluktan ayrılma, dürüstlüğünü koru. Denge her şeyin temeli — hem dışarıda hem içinde.'
   },
@@ -79,7 +79,7 @@ const CARDS = [
   },
   {
     id: 13, name: 'Ölüm', en: 'Death',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/RWS_Tarot_13_Death.jpg/300px-RWS_Tarot_13_Death.jpg',
+    img: 'images/13_death.jpg',
     keywords: ['Dönüşüm', 'Son', 'Yeniden doğuş', 'Bırakma'],
     meaning: 'Korkulacak bir şey değil bu kart — fiziksel ölümü değil köklü bir dönüşümü simgeler. Eski bir şeyin sona ermesi, yeni ve çok daha güzelin başlayacağının habercisidir. Bırak gitsin, yeniye yer aç.'
   },
