@@ -20,6 +20,7 @@
             <button class="btn-secondary" onclick="startSingle()">Tek Kart Çek</button>
             <button class="btn-secondary" onclick="startSpread()">Geçmiş · Şimdi · Gelecek</button>
             <button class="btn-secondary" onclick="startCeltic()">Celtic Cross · 10 Kart</button>
+            <button class="btn-link" onclick="startDictionary()">✦ Kart Sözlüğü</button>
         </div>
     </div>
 </div>
@@ -68,7 +69,15 @@
 <!-- Üç kart yayı -->
 <div id="spread-screen" class="screen">
     <div class="back-btn" onclick="goHome()">← Geri</div>
-    <div class="spread-content">
+
+    <!-- Kart seçim aşaması -->
+    <div id="spread-pick-phase" class="pick-phase">
+        <div id="pick-instruction" class="pick-instruction"></div>
+        <div id="pick-grid" class="pick-grid"></div>
+    </div>
+
+    <!-- Açılım aşaması -->
+    <div id="spread-reveal-phase" class="spread-content" style="display:none">
         <div class="spread-cards">
             <div class="spread-slot">
                 <div class="spread-label">Geçmiş</div>
@@ -102,7 +111,7 @@
             </div>
         </div>
         <div id="spread-meanings" class="spread-meanings"></div>
-        <button class="btn-primary" onclick="drawSpread()">Yeni Yay Çek</button>
+        <button class="btn-primary" onclick="resetSpread()">Yeni Yay Çek</button>
     </div>
 </div>
 
@@ -226,6 +235,35 @@
 
         <div id="celtic-meanings" class="spread-meanings"></div>
         <button class="btn-primary" onclick="drawCeltic()" style="margin-top:8px">Yeni Yayılım</button>
+    </div>
+</div>
+
+<!-- Kart Sözlüğü -->
+<div id="dict-screen" class="screen">
+    <div class="back-btn" onclick="goHome()">← Geri</div>
+    <div class="dict-content">
+        <div class="dict-title">Kart Sözlüğü</div>
+        <div class="dict-grid" id="dict-grid"></div>
+    </div>
+</div>
+
+<!-- Kart modal -->
+<div id="card-modal" class="modal-overlay" onclick="closeCardModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeCardModal()">✕</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="" class="modal-img">
+            <div class="modal-info">
+                <div id="modal-number" class="card-number"></div>
+                <div id="modal-name" class="card-name" style="margin-bottom:4px"></div>
+                <div id="modal-en" class="modal-en"></div>
+                <div id="modal-keywords" class="card-keywords"></div>
+                <div class="modal-section-title">Düz Anlam</div>
+                <div id="modal-meaning" class="card-meaning"></div>
+                <div class="modal-section-title" style="color:#c060a0">↓ Ters Anlam</div>
+                <div id="modal-reversed" class="card-meaning"></div>
+            </div>
+        </div>
     </div>
 </div>
 
