@@ -310,14 +310,14 @@ function resetSpread() {
   pickedCards = [];
   pickDeck = shuffle(CARDS).map(c => ({ ...c, isReversed: Math.random() < 0.33 }));
 
-  document.getElementById('spread-pick-phase').style.display = 'block';
+  document.getElementById('spread-pick-phase').style.display = 'flex';
   document.getElementById('spread-reveal-phase').style.display = 'none';
 
   updatePickInstruction();
   const grid = document.getElementById('pick-grid');
   grid.innerHTML = pickDeck.map((_, i) => `
     <div class="pick-card" id="pick-card-${i}" onclick="pickCard(${i})">
-      <div class="pick-back-design">☽</div>
+      <div class="pick-back-design"></div>
     </div>
   `).join('');
 }
