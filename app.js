@@ -249,6 +249,53 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Daily card
+function startDaily() {
+  showScreen('daily-screen');
+
+  const today = new Date().toISOString().slice(0, 10);
+  const stored = localStorage.getItem('tarot_daily');
+  let daily;
+
+  if (stored) {
+    const parsed = JSON.parse(stored);
+    if (parsed.date === today) {
+      daily = { ...CARDS[parsed.cardId], isReversed: parsed.isReversed };
+    }
+  }
+
+  if (!daily) {
+    const card = shuffle(CARDS)[0];
+    daily = { ...card, isReversed: Math.random() < 0.33 };
+    localStorage.setItem('tarot_daily', JSON.stringify({
+      date: today, cardId: card.id, isReversed: daily.isReversed
+    }));
+  }
+
+  const img = document.getElementById('daily-img');
+  img.src = daily.img;
+  img.alt = daily.name;
+  if (daily.isReversed) { img.classList.add('reversed'); } else { img.classList.remove('reversed'); }
+
+  document.getElementById('daily-date').textContent = new Date().toLocaleDateString('tr-TR', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+  document.getElementById('daily-number').innerHTML =
+    `${daily.id} â€” BÃ¼yÃ¼k Arcana${daily.isReversed ? '&nbsp;&nbsp;<span class="reversed-tag">â†“ TERS</span>' : ''}`;
+  document.getElementById('daily-name').textContent = daily.name;
+  document.getElementById('daily-keywords').textContent = daily.keywords.join('  Â·  ');
+  document.getElementById('daily-meaning').textContent = daily.isReversed ? daily.reversedMeaning : daily.meaning;
+
+  const card = document.getElementById('daily-card').querySelector('.card');
+  card.classList.remove('flipped');
+  document.getElementById('daily-info').classList.add('hidden');
+
+  setTimeout(() => {
+    card.classList.add('flipped');
+    setTimeout(() => { document.getElementById('daily-info').classList.remove('hidden'); }, 350);
+  }, 500);
+}
+
 // Three card spread
 function startSpread() {
   showScreen('spread-screen');
@@ -313,6 +360,77 @@ function renderSpreadMeanings() {
   }).join('');
 
   document.getElementById('spread-meanings').innerHTML = html;
+}
+
+// Celtic Cross
+const CELTIC_LABELS = [
+  'Merkez Â· Åžimdiki Durum',
+  'Engel Â· KarÅŸÄ±ndaki GÃ¼Ã§',
+  'Temel Â· AltÄ±ndaki KÃ¶kler',
+  'GeÃ§miÅŸ Â· YakÄ±n GeÃ§miÅŸ',
+  'TaÃ§ Â· Potansiyel',
+  'Gelecek Â· YakÄ±n Gelecek',
+  'Sen Â· Kendi BakÄ±ÅŸÄ±n',
+  'Ã‡evre Â· DÄ±ÅŸ Etkiler',
+  'Umutlar Â· Beklentiler',
+  'SonuÃ§ Â· OlasÄ± Son'
+];
+
+let celticCards = [];
+
+function startCeltic() {
+  showScreen('celtic-screen');
+  drawCeltic();
+}
+
+function drawCeltic() {
+  celticCards = shuffle(CARDS).slice(0, 10).map(c => ({ ...c, isReversed: Math.random() < 0.33 }));
+
+  for (let i = 0; i < 10; i++) {
+    const cardEl = document.getElementById(`cc-${i}`).querySelector('.card');
+    cardEl.classList.remove('flipped');
+    const img = document.getElementById(`cc-img-${i}`);
+    img.src = celticCards[i].img;
+    img.alt = celticCards[i].name;
+    img.classList.remove('reversed');
+  }
+  document.getElementById('celtic-meanings').innerHTML = '';
+}
+
+function flipCelticCard(idx) {
+  const cardEl = document.getElementById(`cc-${idx}`).querySelector('.card');
+  if (cardEl.classList.contains('flipped')) return;
+  cardEl.classList.add('flipped');
+
+  const c = celticCards[idx];
+  const img = document.getElementById(`cc-img-${idx}`);
+  if (c.isReversed) img.classList.add('reversed');
+
+  setTimeout(() => renderCelticMeanings(), 400);
+}
+
+function renderCelticMeanings() {
+  const flipped = [];
+  for (let i = 0; i < 10; i++) {
+    if (document.getElementById(`cc-${i}`).querySelector('.card').classList.contains('flipped')) {
+      flipped.push(i);
+    }
+  }
+  if (flipped.length === 0) return;
+
+  const html = flipped.map(i => {
+    const c = celticCards[i];
+    return `
+    <div class="spread-meaning-block">
+      <div class="spread-meaning-label">
+        ${CELTIC_LABELS[i]}${c.isReversed ? '&nbsp;<span class="reversed-tag">â†“ TERS</span>' : ''}
+      </div>
+      <div class="spread-meaning-keywords">${c.name} Â· ${c.keywords.join(' Â· ')}</div>
+      <div class="spread-meaning-text">${c.isReversed ? c.reversedMeaning : c.meaning}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('celtic-meanings').innerHTML = html;
 }
 
 createStars();
