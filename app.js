@@ -297,13 +297,57 @@ function startDaily() {
 }
 
 // Three card spread
+let pickDeck = [];
+let pickedCards = [];
+const PICK_LABELS = ['Geçmiş', 'Şimdi', 'Gelecek'];
+
 function startSpread() {
   showScreen('spread-screen');
-  drawSpread();
+  resetSpread();
 }
 
-function drawSpread() {
-  spreadCards = shuffle(CARDS).slice(0, 3).map(c => ({ ...c, isReversed: Math.random() < 0.33 }));
+function resetSpread() {
+  pickedCards = [];
+  pickDeck = shuffle(CARDS).map(c => ({ ...c, isReversed: Math.random() < 0.33 }));
+
+  document.getElementById('spread-pick-phase').style.display = 'block';
+  document.getElementById('spread-reveal-phase').style.display = 'none';
+
+  updatePickInstruction();
+  const grid = document.getElementById('pick-grid');
+  grid.innerHTML = pickDeck.map((_, i) => `
+    <div class="pick-card" id="pick-card-${i}" onclick="pickCard(${i})">
+      <div class="pick-back-design">☽</div>
+    </div>
+  `).join('');
+}
+
+function updatePickInstruction() {
+  const idx = pickedCards.length;
+  document.getElementById('pick-instruction').textContent =
+    `${PICK_LABELS[idx]} için bir kart seç  (${idx + 1} / 3)`;
+}
+
+function pickCard(i) {
+  if (pickedCards.some(p => p === i)) return;
+  pickedCards.push(i);
+
+  const el = document.getElementById(`pick-card-${i}`);
+  el.classList.add('picked');
+  el.querySelector('.pick-back-design').textContent = PICK_LABELS[pickedCards.length - 1];
+
+  if (pickedCards.length === 3) {
+    setTimeout(showSpreadReveal, 500);
+  } else {
+    updatePickInstruction();
+  }
+}
+
+function showSpreadReveal() {
+  spreadCards = pickedCards.map(i => pickDeck[i]);
+
+  document.getElementById('spread-pick-phase').style.display = 'none';
+  document.getElementById('spread-reveal-phase').style.display = 'flex';
 
   for (let i = 0; i < 3; i++) {
     const card = document.getElementById(`spread-card-${i}`);
@@ -315,7 +359,6 @@ function drawSpread() {
     document.getElementById(`spread-name-${i}`).innerHTML = '';
     document.getElementById(`spread-name-${i}`).style.opacity = '0';
   }
-
   document.getElementById('spread-meanings').innerHTML = '';
 }
 
@@ -431,6 +474,36 @@ function renderCelticMeanings() {
   }).join('');
 
   document.getElementById('celtic-meanings').innerHTML = html;
+}
+
+// Kart Sözlüğü
+function startDictionary() {
+  showScreen('dict-screen');
+  const grid = document.getElementById('dict-grid');
+  grid.innerHTML = CARDS.map(c => `
+    <div class="dict-card" onclick="openCardModal(${c.id})">
+      <div class="dict-card-img"><img src="${c.img}" alt="${c.name}"></div>
+      <div class="dict-card-num">${c.id}</div>
+      <div class="dict-card-name">${c.name}</div>
+    </div>
+  `).join('');
+}
+
+function openCardModal(id) {
+  const c = CARDS[id];
+  document.getElementById('modal-img').src = c.img;
+  document.getElementById('modal-img').classList.remove('reversed');
+  document.getElementById('modal-number').textContent = `${c.id} — Büyük Arcana`;
+  document.getElementById('modal-name').textContent = c.name;
+  document.getElementById('modal-en').textContent = c.en;
+  document.getElementById('modal-keywords').textContent = c.keywords.join('  ·  ');
+  document.getElementById('modal-meaning').textContent = c.meaning;
+  document.getElementById('modal-reversed').textContent = c.reversedMeaning;
+  document.getElementById('card-modal').style.display = 'flex';
+}
+
+function closeCardModal() {
+  document.getElementById('card-modal').style.display = 'none';
 }
 
 createStars();
