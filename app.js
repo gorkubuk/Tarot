@@ -1,4 +1,4 @@
-﻿const CARDS = [
+const CARDS = [
   {
     id: 0, name: 'Deli', en: 'The Fool',
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/300px-RWS_Tarot_00_Fool.jpg',
@@ -43,7 +43,7 @@
   },
   {
     id: 7, name: 'Savaş Arabası', en: 'The Chariot',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/RWS_Tarot_07_Chariot.jpg/300px-RWS_Tarot_07_Chariot.jpg',
+    img: 'images/07_chariot.jpg',
     keywords: ['Zafer', 'Kontrol', 'İrade', 'Kararlılık'],
     meaning: 'İradenin ve kararlılığın zirve noktasındasın. Engeller olsa da bunları aşacak güce sahipsin. Odaklanmış kal, disiplinden ödün verme — zafer yakın.'
   },
@@ -91,7 +91,7 @@
   },
   {
     id: 15, name: 'Şeytan', en: 'The Devil',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/RWS_Tarot_15_Devil.jpg/300px-RWS_Tarot_15_Devil.jpg',
+    img: 'images/15_devil.jpg',
     keywords: ['Bağlanma', 'Korkular', 'İllüzyon', 'Farkındalık'],
     meaning: 'Seni tutan zincirleri fark et — bu zincirler çoğunlukla kendi koyduğun sınırlar, korkular ya da alışkanlıklardır. Kendini mahkum eden neyin illüzyon olduğunu gör. Özgürlük senin elinde.'
   },
@@ -109,13 +109,13 @@
   },
   {
     id: 18, name: 'Ay', en: 'The Moon',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/RWS_Tarot_18_Moon.jpg/300px-RWS_Tarot_18_Moon.jpg',
+    img: 'images/18_moon.jpg',
     keywords: ['İllüzyon', 'Sezgi', 'Bilinçdışı', 'Belirsizlik'],
     meaning: 'Her şey göründüğü gibi olmayabilir. Sezgilerine güven ama duygularının seni yanıltmamasına dikkat et. Belirsizlik geçici — karanlıktaki yolculuk seni aydınlatacak.'
   },
   {
     id: 19, name: 'Güneş', en: 'The Sun',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RWS_Tarot_19_Sun.jpg/300px-RWS_Tarot_19_Sun.jpg',
+    img: 'images/19_sun.jpg',
     keywords: ['Mutluluk', 'Başarı', 'Canlılık', 'Aydınlık'],
     meaning: 'En pozitif kartlardan biri. Sevinç, başarı ve bolluk döneminin kapıda. İçindeki çocuğu serbest bırak, hayatın güzelliklerine açık ol. Işıklı günler geliyor.'
   },
