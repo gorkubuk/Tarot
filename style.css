@@ -637,6 +637,12 @@ body {
   gap: 24px;
 }
 
+#celtic-meanings {
+  min-height: 140px;
+  max-width: 560px;
+  width: 100%;
+}
+
 .celtic-layout {
   display: flex;
   gap: 20px;
