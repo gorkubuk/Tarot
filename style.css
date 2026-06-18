@@ -68,8 +68,44 @@ body {
 .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
+}
+
+.btn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.btn-desc {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-align: center;
+  font-style: italic;
+}
+
+.niyet-text {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.screen-desc {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.07em;
+  font-style: italic;
+  padding: 64px 24px 0;
+  line-height: 1.6;
 }
 
 .btn-primary {
