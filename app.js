@@ -885,7 +885,7 @@ const SUIT_LABELS = { cups: 'Kadehler', wands: 'Asalar', swords: 'Kılıçlar', 
 
 function startDictionary() {
   showScreen('dict-screen');
-  renderDictGrid(CARDS);
+  renderDictGrid(CARDS.filter(c => !c.suit));
 }
 
 function renderDictGrid(cards) {
