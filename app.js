@@ -846,38 +846,25 @@ function drawCeltic() {
 
 function flipCelticCard(idx) {
   const cardEl = document.getElementById(`cc-${idx}`).querySelector('.card');
-  if (cardEl.classList.contains('flipped')) return;
-  cardEl.classList.add('flipped');
-
-  const c = celticCards[idx];
-  const img = document.getElementById(`cc-img-${idx}`);
-  if (c.isReversed) img.classList.add('reversed');
-
-  setTimeout(() => renderCelticMeanings(), 400);
+  if (!cardEl.classList.contains('flipped')) {
+    cardEl.classList.add('flipped');
+    if (celticCards[idx].isReversed) document.getElementById(`cc-img-${idx}`).classList.add('reversed');
+    setTimeout(() => showCelticMeaning(idx), 400);
+  } else {
+    showCelticMeaning(idx);
+  }
 }
 
-function renderCelticMeanings() {
-  const flipped = [];
-  for (let i = 0; i < 10; i++) {
-    if (document.getElementById(`cc-${i}`).querySelector('.card').classList.contains('flipped')) {
-      flipped.push(i);
-    }
-  }
-  if (flipped.length === 0) return;
-
-  const html = flipped.map(i => {
-    const c = celticCards[i];
-    return `
+function showCelticMeaning(idx) {
+  const c = celticCards[idx];
+  document.getElementById('celtic-meanings').innerHTML = `
     <div class="spread-meaning-block">
       <div class="spread-meaning-label">
-        ${CELTIC_LABELS[i]}${c.isReversed ? '&nbsp;<span class="reversed-tag">↓ TERS</span>' : ''}
+        ${CELTIC_LABELS[idx]}${c.isReversed ? '&nbsp;<span class="reversed-tag">↓ TERS</span>' : ''}
       </div>
       <div class="spread-meaning-keywords">${c.name} · ${c.keywords.join(' · ')}</div>
       <div class="spread-meaning-text">${c.isReversed ? c.reversedMeaning : c.meaning}</div>
     </div>`;
-  }).join('');
-
-  document.getElementById('celtic-meanings').innerHTML = html;
 }
 
 // Kart Sözlüğü
