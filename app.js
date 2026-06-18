@@ -734,7 +734,7 @@ function pickCard(i) {
 
   const el = document.getElementById(`pick-card-${i}`);
   el.classList.add('picked');
-  el.querySelector('.pick-back-design').textContent = PICK_LABELS[pickedCards.length - 1];
+  el.querySelector('.pick-back-design').textContent = pickedCards.length;
 
   if (pickedCards.length === 3) {
     setTimeout(showSpreadReveal, 500);
@@ -881,23 +881,37 @@ function renderCelticMeanings() {
 }
 
 // Kart Sözlüğü
+const SUIT_LABELS = { cups: 'Kadehler', wands: 'Asalar', swords: 'Kılıçlar', pentacles: 'Diskler' };
+
 function startDictionary() {
   showScreen('dict-screen');
-  const grid = document.getElementById('dict-grid');
-  grid.innerHTML = CARDS.map(c => `
+  renderDictGrid(CARDS);
+}
+
+function renderDictGrid(cards) {
+  document.getElementById('dict-grid').innerHTML = cards.map(c => `
     <div class="dict-card" onclick="openCardModal(${c.id})">
       <div class="dict-card-img"><img src="${c.img}" alt="${c.name}"></div>
-      <div class="dict-card-num">${c.id}</div>
       <div class="dict-card-name">${c.name}</div>
     </div>
   `).join('');
+}
+
+function filterDict(suit, btn) {
+  document.querySelectorAll('.dict-filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filtered = suit === '' ? CARDS
+    : suit === 'major' ? CARDS.filter(c => !c.suit)
+    : CARDS.filter(c => c.suit === suit);
+  renderDictGrid(filtered);
 }
 
 function openCardModal(id) {
   const c = CARDS[id];
   document.getElementById('modal-img').src = c.img;
   document.getElementById('modal-img').classList.remove('reversed');
-  document.getElementById('modal-number').textContent = `${c.id} — Büyük Arcana`;
+  const label = c.suit ? SUIT_LABELS[c.suit] : 'Major Arcana';
+  document.getElementById('modal-number').textContent = c.suit ? label : `${c.id} · ${label}`;
   document.getElementById('modal-name').textContent = c.name;
   document.getElementById('modal-en').textContent = c.en;
   document.getElementById('modal-keywords').textContent = c.keywords.join('  ·  ');
