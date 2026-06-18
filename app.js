@@ -360,6 +360,10 @@ function showSpreadReveal() {
     document.getElementById(`spread-name-${i}`).style.opacity = '0';
   }
   document.getElementById('spread-meanings').innerHTML = '';
+
+  for (let i = 0; i < 3; i++) {
+    setTimeout(() => flipSpreadCard(i), 700 + i * 550);
+  }
 }
 
 function flipSpreadCard(idx) {
