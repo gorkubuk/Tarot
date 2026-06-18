@@ -152,6 +152,406 @@ const CARDS = [
     keywords: ['Tamamlanma', 'Bütünleşme', 'Başarı', 'Döngünün sonu'],
     meaning: 'Bir döngü tamamlandı ve gerçek bir başarıya ulaştın. Yaptığın yolculuktan gurur duy, kazanımlarını kutla. Bu bir son değil — daha büyük bir yolculuğun yeni başlangıcı.',
     reversedMeaning: 'Hedefe yakınsın ama tamamlanmamış hissediyorsun. Döngüyü kapatmak için eksik olan küçük bir şeye dikkat et. Büyük resmi görmek bazen son adımı atmayı gerektirir.'
+  },
+
+  // --- MINOR ARCANA: KADEHLER (CUPS) ---
+  {
+    id: 22, name: 'Kadehlerin Ası', en: 'Ace of Cups', suit: 'cups',
+    img: 'images/cups01.jpg',
+    keywords: ['Yeni aşk', 'Duygusal açılış', 'Sezgi', 'Bolluk'],
+    meaning: 'Kadehlerin Ası, duygusal ve ruhsal bir yenilenmenin habercisidir. Yüreğinin kapılarını sonuna kadar açma zamanı; yeni bir aşk, derin bir bağ ya da içsel bir huzur yaklaşıyor olabilir. Sezgilerine güven ve duygularının akmasına izin ver.',
+    reversedMeaning: 'Duygusal tıkanıklık ya da bastırılmış hisler söz konusu olabilir. Kendini ifade etmekte zorlanıyor, sevgiyi almaktan kaçınıyor olabilirsin. İçindeki kapıları yeniden açmak için önce kendine karşı dürüst ol.'
+  },
+  {
+    id: 23, name: 'Kadehlerin İkisi', en: 'Two of Cups', suit: 'cups',
+    img: 'images/cups02.jpg',
+    keywords: ['Birlik', 'Ortaklık', 'Karşılıklı çekim', 'Bağ'],
+    meaning: 'İki kadeh, iki ruh arasındaki derin ve dengeli bağı simgeler. Romantik bir ilişki, güçlü bir dostluk ya da iş ortaklığı gelişiyor olabilir. Karşılıklı saygı ve anlayışın temeli atılıyor.',
+    reversedMeaning: 'İlişkide dengesizlik ya da iletişim kopukluğu var. Bir taraf daha fazla veriyor ya da beklentiler örtüşmüyor. Dürüst bir konuşma durumu kurtarabilir.'
+  },
+  {
+    id: 24, name: 'Kadehlerin Üçü', en: 'Three of Cups', suit: 'cups',
+    img: 'images/cups03.jpg',
+    keywords: ['Kutlama', 'Dostluk', 'Neşe', 'Topluluk'],
+    meaning: 'Üç kadeh, sevinç dolu bir araya gelişi ve ortak başarıyı kutlamayı simgeler. Sevdiklerinle geçireceğin güzel anlar, bir başarının kutlanması ya da yeni bir çevreyle kaynaşma dönemindesin.',
+    reversedMeaning: 'Sosyal çevrenizdeki dedikodu ya da rekabet seni yıpratıyor olabilir. Aşırı eğlence odaklanmanı engelliyor. Gerçek dostlukları yüzeysel ilişkilerden ayırt etme zamanı.'
+  },
+  {
+    id: 25, name: 'Kadehlerin Dördü', en: 'Four of Cups', suit: 'cups',
+    img: 'images/cups04.jpg',
+    keywords: ['Hayal kırıklığı', 'İçe kapanma', 'Değerlendirme', 'Kayıtsızlık'],
+    meaning: 'Dört kadeh, mevcut olanaklara karşı kayıtsızlığı ve durgunluğu simgeler. Önüne uzatılan fırsatı görmezden gelebilirsin; bir adım geri çekilip gerçekte ne istediğini sorgulamanın zamanı.',
+    reversedMeaning: 'Uzun süren durgunluktan uyandığını ve yeniden ilgi duymaya başladığını hissediyorsun. Dışarıdan gelen bir teklifi ya da daveti değerlendirmeye hazırsın.'
+  },
+  {
+    id: 26, name: 'Kadehlerin Beşi', en: 'Five of Cups', suit: 'cups',
+    img: 'images/cups05.jpg',
+    keywords: ['Kayıp', 'Üzüntü', 'Pişmanlık', 'Yas'],
+    meaning: 'Beş kadeh, yaşanan bir kaybın ya da hayal kırıklığının ağırlığını taşır. Dökülen kadehlere odaklanmak yerine geride duran iki dolu kadehi de görmeye çalış; her kayıp bir şeyleri de geride bırakır.',
+    reversedMeaning: 'Yas sürecinin sonuna yaklaşıyorsun. Geçmişi bırakmaya ve ileriye bakmaya hazır olduğunu hissediyorsun. İçindeki iyileşme başlıyor.'
+  },
+  {
+    id: 27, name: 'Kadehlerin Altısı', en: 'Six of Cups', suit: 'cups',
+    img: 'images/cups06.jpg',
+    keywords: ['Nostalji', 'Çocukluk', 'Masumiyet', 'Anılar'],
+    meaning: 'Altı kadeh, geçmişin sıcaklığına ve masum anılara yolculuğu simgeler. Eski bir dost ya da aşk yeniden hayatına girebilir; ya da çocukluğundan taşınan bir şeyin izlerini bugününde keşfedebilirsin.',
+    reversedMeaning: 'Geçmişe takılıp kalmak seni bugünden alıkoyuyor. Nostalji bir sığınak olmaktan çıkıp bir hapishaneye dönüşmüş olabilir. İlerlemenin zamanı geldi.'
+  },
+  {
+    id: 28, name: 'Kadehlerin Yedisi', en: 'Seven of Cups', suit: 'cups',
+    img: 'images/cups07.jpg',
+    keywords: ['Hayal', 'Yanılsama', 'Seçim bolluğu', 'Kaçış'],
+    meaning: 'Yedi kadeh, çok sayıda seçenek ve hayal arasında kaybolmayı simgeler. Her şey mümkün görünebilir ama çoğu yanılsamadan ibaret. Gerçekçi adımlar atmak için hayallerini süzgeçten geçir.',
+    reversedMeaning: 'Yanılsamalardan sıyrılıp gerçekçi bir bakış açısı kazanıyorsun. Neyin gerçek, neyin hayal ürünü olduğunu daha net görüyorsun. Somut adımlar atmaya hazırsın.'
+  },
+  {
+    id: 29, name: 'Kadehlerin Sekizi', en: 'Eight of Cups', suit: 'cups',
+    img: 'images/cups08.jpg',
+    keywords: ['Terk etmek', 'Yolculuk', 'Arayış', 'Bırakmak'],
+    meaning: 'Sekiz kadeh, bir şeyi geride bırakıp daha derin bir anlam arayışına çıkmayı simgeler. Dışarıdan iyi görünen ama içten boş hissettiren bir şeyi terk etme cesareti gerekiyor. Ruhunun seni çektiği yöne git.',
+    reversedMeaning: 'Gitmek istediğin halde kalıyorsun; bir durumdan ya da ilişkiden kopamıyorsun. Korkuların ya da sorumluluk duygun seni tutuyor. Kendine dürüst ol.'
+  },
+  {
+    id: 30, name: 'Kadehlerin Dokuzu', en: 'Nine of Cups', suit: 'cups',
+    img: 'images/cups09.jpg',
+    keywords: ['Memnuniyet', 'Dilek', 'Mutluluk', 'Tatmin'],
+    meaning: '"Dilek kartı" olarak bilinen dokuz kadeh, duygusal doyumu ve hayallerin gerçekleşmesini simgeler. Bir süreliğine kendinle barışık ve hayatından memnun olacaksın. İçten gelen bir dilekle bağlantı kur.',
+    reversedMeaning: 'Dış görünüşe rağmen içte bir boşluk hissediyorsun. Maddi ya da sosyal başarı ruhsal tatmini sağlamıyor. Gerçekte ne istediğini yeniden keşfet.'
+  },
+  {
+    id: 31, name: 'Kadehlerin Onu', en: 'Ten of Cups', suit: 'cups',
+    img: 'images/cups10.jpg',
+    keywords: ['Mutlu son', 'Aile huzuru', 'Uyum', 'Tamamlanma'],
+    meaning: 'On kadeh, duygusal açıdan tam bir tamamlanmayı ve aile içindeki derin huzuru simgeler. Sevdiklerinle kurduğun bağlar güçlü, yaşamında bir uyum ve bereket dönemi var. Minnetle kucakla.',
+    reversedMeaning: 'Aile içi ya da yakın ilişkilerde gerilim ve uyumsuzluk söz konusu. Beklentiler gerçeklikle örtüşmüyor. Sevdiklerinle açık bir iletişim kurmaya çalış.'
+  },
+  {
+    id: 32, name: 'Kadehlerin Paçı', en: 'Page of Cups', suit: 'cups',
+    img: 'images/cups11.jpg',
+    keywords: ['Hayal gücü', 'Sezgi', 'Duygusal mesaj', 'Yaratıcılık'],
+    meaning: 'Kadehlerin Paçı, duygusal açıdan açık ve meraklı bir enerjiyi temsil eder. Beklenmedik bir haber, romantik bir mesaj ya da yaratıcı bir ilham kapıda olabilir. Sezgilerine kulak ver ve içindeki çocuğu serbest bırak.',
+    reversedMeaning: 'Duygusal olgunluktan yoksun davranışlar ya da hayal dünyasına aşırı kaçış görülebilir. İçsel sesini duymakta zorlanıyor ya da mesajları yanlış yorumluyorsun.'
+  },
+  {
+    id: 33, name: 'Kadehlerin Şövalyesi', en: 'Knight of Cups', suit: 'cups',
+    img: 'images/cups12.jpg',
+    keywords: ['Romantizm', 'Teklif', 'Duygusal açılım', 'İdealizm'],
+    meaning: 'Kadehlerin Şövalyesi, kalbiyle hareket eden, romantik ve idealist bir enerjiyi temsil eder. Duygusal bir teklif, romantik bir jest ya da yaratıcı bir davet yaklaşıyor olabilir. Hislerini eyleme dönüştürme zamanı.',
+    reversedMeaning: 'Duygusal manipülasyon, aşırı romantizm ya da kıskançlık söz konusu olabilir. Sözler eylemle örtüşmüyor; gerçekten hissedilip hissedilmediğini sorgulamanın zamanı.'
+  },
+  {
+    id: 34, name: 'Kadehlerin Kraliçesi', en: 'Queen of Cups', suit: 'cups',
+    img: 'images/cups13.jpg',
+    keywords: ['Sezgi', 'Şefkat', 'Empati', 'Duygusal derinlik'],
+    meaning: 'Kadehlerin Kraliçesi, derin bir sezgiye ve koşulsuz şefkate sahip, duygusal olarak olgun bir enerjiyi temsil eder. Hem kendine hem çevrene karşı anlayışlı ve nazik bir dönemdesin. Sezgilerine güven.',
+    reversedMeaning: 'Duygusal bağımlılık, aşırı hassasiyet ya da sınırları koruyamamak söz konusu olabilir. Kendi ihtiyaçlarını göz ardı ederek başkalarına hizmet etmekten yorulmuş olabilirsin.'
+  },
+  {
+    id: 35, name: 'Kadehlerin Kralı', en: 'King of Cups', suit: 'cups',
+    img: 'images/cups14.jpg',
+    keywords: ['Duygusal denge', 'Olgunluk', 'Bilgelik', 'Kontrol'],
+    meaning: 'Kadehlerin Kralı, duygularını yönetebilen, hem mantıklı hem de şefkatli olan olgun bir enerjiyi temsil eder. Çevrenize rehberlik edecek, hem kalbinle hem aklınla karar verebileceksin. Denge güçlü yanın.',
+    reversedMeaning: 'Duygusal baskı, manipülasyon ya da içsel çalkantıları bastırma eğilimi görülebilir. Dışarıda sakin görünürken içte fırtınaların estiği bir dönem.'
+  },
+
+  // --- MINOR ARCANA: ASALAR (WANDS) ---
+  {
+    id: 36, name: 'Asaların Ası', en: 'Ace of Wands', suit: 'wands',
+    img: 'images/wands01.jpg',
+    keywords: ['İlham', 'Yaratıcılık', 'Enerji', 'Yeni başlangıç'],
+    meaning: 'Asaların Ası, yakıcı bir ilham ve yaratıcı enerjinin patlamasını simgeler. Yeni bir proje, girişim ya da tutku dolu bir yolculuğa başlamak için mükemmel bir an. Ateşini alevlendir ve cesaretli adımlar at.',
+    reversedMeaning: 'Gecikme, tıkanma ya da motivasyon eksikliği söz konusu. İçindeki ateş sönmeye başlamış olabilir. Kendini yeniden ateşleyecek küçük bir adım at.'
+  },
+  {
+    id: 37, name: 'Asaların İkisi', en: 'Two of Wands', suit: 'wands',
+    img: 'images/wands02.jpg',
+    keywords: ['Planlama', 'Vizyon', 'Ufuk', 'Karar'],
+    meaning: 'Asaların İkisi, gelecek için büyük planlar yapma ve cesur kararlar verme aşamasını simgeler. Dünya ayaklarının önünde; hangi yöne gideceğini belirle. Vizyonunu somut adımlara dönüştürmeye hazırsın.',
+    reversedMeaning: 'Belirsizlik ve kararsızlık içindesin. Büyük hayaller kuruyorsun ama ilk adımı atmaktan çekiniyorsun. Korkularını tanı ve küçük bir hamle yap.'
+  },
+  {
+    id: 38, name: 'Asaların Üçü', en: 'Three of Wands', suit: 'wands',
+    img: 'images/wands03.jpg',
+    keywords: ['Genişleme', 'Beklenti', 'İlerleme', 'Büyüme'],
+    meaning: 'Asaların Üçü, ilk adımların ötesine geçip ilk meyvelerin görünmeye başladığı aşamayı simgeler. Attığın adımlar karşılığını vermeye başlıyor; ufkunu genişletme ve işlerini büyütme zamanı.',
+    reversedMeaning: 'Hayal kırıklığı ya da beklentilerin ertelenmesi söz konusu. Planlar beklendiği gibi ilerlemiyor. Stratejini gözden geçir ve sabırlı ol.'
+  },
+  {
+    id: 39, name: 'Asaların Dördü', en: 'Four of Wands', suit: 'wands',
+    img: 'images/wands04.jpg',
+    keywords: ['Kutlama', 'Ev', 'İstikrar', 'Başarı'],
+    meaning: 'Asaların Dördü, bir aşamanın başarıyla tamamlanmasını ve bunun kutlanmasını simgeler. Ev, aile ya da toplulukla ilgili mutlu haberler gelebilir. Temeller sağlam, kutlamaya hakkın var.',
+    reversedMeaning: 'Ev ya da aile ortamındaki huzursuzluk ya da ertelenmiş kutlama. İçsel bir huzur ve denge arayışındasın.'
+  },
+  {
+    id: 40, name: 'Asaların Beşi', en: 'Five of Wands', suit: 'wands',
+    img: 'images/wands05.jpg',
+    keywords: ['Çatışma', 'Rekabet', 'Tartışma', 'Enerji'],
+    meaning: 'Asaların Beşi, farklı görüşlerin çarpıştığı rekabetçi bir dönemin içindesin. Bu çatışmalar seni güçlendirmek için bir fırsat da olabilir; ama enerjiyi doğru yönlendirmek önemli.',
+    reversedMeaning: 'Uzun süren çatışmaların sona ermesi ya da kaçınılan bir yüzleşme. Uzlaşmaya açık ol; her savaşı tek başına kazanmak zorunda değilsin.'
+  },
+  {
+    id: 41, name: 'Asaların Altısı', en: 'Six of Wands', suit: 'wands',
+    img: 'images/wands06.jpg',
+    keywords: ['Zafer', 'Takdir', 'Başarı', 'Tanınma'],
+    meaning: 'Asaların Altısı, hak edilen bir başarı ve toplumsal takdir anını simgeler. Emeklerin görülüyor ve takdir ediliyor. Özgüvenir yüksek; bu zaferi hakkıyla sahiplen.',
+    reversedMeaning: 'Başarının gölgelendiği ya da takdir görmediğin bir dönem. Başkalarının onayına olan bağımlılığını sorgulamanın zamanı.'
+  },
+  {
+    id: 42, name: 'Asaların Yedisi', en: 'Seven of Wands', suit: 'wands',
+    img: 'images/wands07.jpg',
+    keywords: ['Savunma', 'Kararlılık', 'Direniş', 'Meydan okuma'],
+    meaning: 'Asaların Yedisi, her taraftan gelen baskılara karşın konumunu koruma kararlılığını simgeler. Bir zorlukla yüzleşiyorsun ama doğruluğuna inanıyorsun. Tutumundan vazgeçme.',
+    reversedMeaning: 'Tükenmişlik ya da gereksiz yere çok fazla şeyle mücadele etme hissi. Hangi savaşların gerçekten senin savaşın olduğunu seç.'
+  },
+  {
+    id: 43, name: 'Asaların Sekizi', en: 'Eight of Wands', suit: 'wands',
+    img: 'images/wands08.jpg',
+    keywords: ['Hız', 'Hareket', 'İlerleme', 'İletişim'],
+    meaning: 'Asaların Sekizi, hızla ilerleyen olayları ve ani gelişmeleri simgeler. Her şey çok hızlı oluyor; gelen mesajlara, seyahate ya da fırsatlara hazır ol. Akışa kapıl.',
+    reversedMeaning: 'Gecikmeler, engellemeler ya da anlaşmazlıklar söz konusu. Planlar beklendiği gibi gitmiyor; sabırsızlık durumu daha da zorlaştırabilir.'
+  },
+  {
+    id: 44, name: 'Asaların Dokuzu', en: 'Nine of Wands', suit: 'wands',
+    img: 'images/wands09.jpg',
+    keywords: ['Dayanıklılık', 'Sınırlar', 'Yorgunluk', 'Direnç'],
+    meaning: 'Asaların Dokuzu, uzun bir mücadelenin ardından yorgun ama ayakta durmanın kararlılığını simgeler. Son engelin yaklaştığını hissediyorsun. Biraz daha dayan; sınırlarını korurken devam et.',
+    reversedMeaning: 'Tükenmişlik ve pes etme dürtüsü güçlenmiş. Sınırlarını aşmış, artık devam etmek istemiyorsun. İyi bir dinlenme ve destek alma zamanı olabilir.'
+  },
+  {
+    id: 45, name: 'Asaların Onu', en: 'Ten of Wands', suit: 'wands',
+    img: 'images/wands10.jpg',
+    keywords: ['Yük', 'Sorumluluk', 'Tükenmişlik', 'Baskı'],
+    meaning: 'Asaların Onu, çok fazla yükü tek başına taşımanın eziciliğini simgeler. Üzerine aldığın sorumluluklar artık omuzlarını eziyor. Yükü paylaşmayı ya da bir kısmını bırakmayı öğren.',
+    reversedMeaning: 'Yükten kurtulma ve sorumluluklardan bir kısmını devretme zamanı. Tükenmişliğin son evresinden çıkış başlıyor.'
+  },
+  {
+    id: 46, name: 'Asaların Paçı', en: 'Page of Wands', suit: 'wands',
+    img: 'images/wands11.jpg',
+    keywords: ['Merak', 'Macera', 'Enerji', 'Cesaret'],
+    meaning: 'Asaların Paçı, yeni bir fikir ya da maceraya atılmaya hazır, enerjik ve meraklı bir ruhun habercisidir. Girişimci ruhun uyanıyor; küçük de olsa cesur bir adım at.',
+    reversedMeaning: 'Düşüncesizce hareket etme ya da enerjiyi odaklayamama söz konusu. Heyecan gerçekçi planların önüne geçiyor. Biraz duraksayıp yönünü netleştir.'
+  },
+  {
+    id: 47, name: 'Asaların Şövalyesi', en: 'Knight of Wands', suit: 'wands',
+    img: 'images/wands12.jpg',
+    keywords: ['Macera', 'Tutku', 'Cesaret', 'Dürtüsellik'],
+    meaning: 'Asaların Şövalyesi, ateşli, enerjik ve cesaretli bir ruhla harekete geçmeyi simgeler. Hızlı ilerleyen ve heyecan verici bir dönemin içindesin. Tutkunuzu eyleme dönüştür ama sabırsızlıktan kaçın.',
+    reversedMeaning: 'Dürtüsel kararlar, dağınık enerji ya da yarım bırakılan projeler. Yavaşlayıp planını netleştirmeden hareket etmek riskli.'
+  },
+  {
+    id: 48, name: 'Asaların Kraliçesi', en: 'Queen of Wands', suit: 'wands',
+    img: 'images/wands13.jpg',
+    keywords: ['Özgüven', 'Karizma', 'Yaratıcılık', 'Güç'],
+    meaning: 'Asaların Kraliçesi, doğal bir lider, özgüveni ve enerjisiyle çevresini aydınlatan güçlü bir enerjiyi temsil eder. Hem içten hem dışarıdan ışıl ışıl parlıyorsun. Bu gücü iyi amaçlar için kullan.',
+    reversedMeaning: 'İçsel güvensizlik ya da dışarıya yansıyan baskınlık. Kendi ışığından korkar gibi davranıyor ya da çevrenize hükmetmeye çalışıyor olabilirsin.'
+  },
+  {
+    id: 49, name: 'Asaların Kralı', en: 'King of Wands', suit: 'wands',
+    img: 'images/wands14.jpg',
+    keywords: ['Liderlik', 'Vizyon', 'Girişimcilik', 'Otorite'],
+    meaning: 'Asaların Kralı, güçlü bir vizyona sahip, doğal lider ve karizmatik bir enerjiyi temsil eder. Büyük hedefler için ilham verici adımlar atabilirsin. İnsanları ortak bir amaç etrafında toplayabilirsin.',
+    reversedMeaning: 'Baskıcı liderlik, ego ya da kontrolcülük söz konusu olabilir. Güç, hizmet için değil kontrol için kullanılıyor olabilir. Vizyonunu yeniden gözden geçir.'
+  },
+
+  // --- MINOR ARCANA: KILICLAR (SWORDS) ---
+  {
+    id: 50, name: 'Kılıçların Ası', en: 'Ace of Swords', suit: 'swords',
+    img: 'images/swords01.jpg',
+    keywords: ['Netlik', 'Gerçek', 'Zihinsel keskinlik', 'Zafer'],
+    meaning: 'Kılıçların Ası, zihinsel bir aydınlanma ve kristal berraklığında bir gerçeğin ortaya çıkmasını simgeler. Keskin bir karar alma ya da net bir iletişim anında doğruyu söylemek için cesaret buluyorsun. Gerçek özgürleştirir.',
+    reversedMeaning: 'Zihinsel karmaşa, yanıltıcı iletişim ya da gerçeği söylemekten kaçınma. Bir durum hakkında kendine ya da başkasına dürüst olmaktan çekiniyorsun.'
+  },
+  {
+    id: 51, name: 'Kılıçların İkisi', en: 'Two of Swords', suit: 'swords',
+    img: 'images/swords02.jpg',
+    keywords: ['Çıkmaz', 'Kararsızlık', 'Denge', 'Kör nokta'],
+    meaning: 'Kılıçların İkisi, iki seçenek arasında sıkışıp kalmanın yol açtığı zorlu bir duraksama anını simgeler. Gözlerini kapatmak durumu ortadan kaldırmaz; bilinçli bir seçim yapman gerekiyor.',
+    reversedMeaning: 'Kilitlenme çözülmeye başladığını hissediyorsun. Zorlu bir kararı artık erteleyemiyorsun; gerçeği görmek için perde aralanıyor.'
+  },
+  {
+    id: 52, name: 'Kılıçların Üçü', en: 'Three of Swords', suit: 'swords',
+    img: 'images/swords03.jpg',
+    keywords: ['Kalp kırıklığı', 'Acı', 'İhanet', 'Kayıp'],
+    meaning: 'Kılıçların Üçü, yüreği derinden yaralayan bir ayrılık, ihanet ya da acı gerçeği simgeler. Bu acı geçici; ama yaşanması ve kabul edilmesi gerekiyor. Gözyaşları zayıflık değil, iyileşmenin başlangıcıdır.',
+    reversedMeaning: 'İyileşme sürecinin başladığını ya da acının hafiflemekte olduğunu hissediyorsun. Eski yaraları deşmek yerine bırakmayı öğrenme zamanı.'
+  },
+  {
+    id: 53, name: 'Kılıçların Dördü', en: 'Four of Swords', suit: 'swords',
+    img: 'images/swords04.jpg',
+    keywords: ['Dinlenme', 'Geri çekilme', 'İyileşme', 'Meditasyon'],
+    meaning: 'Kılıçların Dördü, zihinsel yorgunluğu gidermek için gereken sessizliği ve dinlenmeyi simgeler. Bir adım geri çekilip yeniden enerji toplamak gerekiyor. Hareketsizlik bazen en güçlü stratejidir.',
+    reversedMeaning: 'Zorunlu dinlenmeden kaçınıyor ya da fazla uzun süren bir durgunluktan çıkmak istiyorsun. Yavaş yavaş yeniden harekete geçme zamanı.'
+  },
+  {
+    id: 54, name: 'Kılıçların Beşi', en: 'Five of Swords', suit: 'swords',
+    img: 'images/swords05.jpg',
+    keywords: ['Çatışma', 'Yenilgi', 'Onur', 'Zayiat'],
+    meaning: 'Kılıçların Beşi, her ne pahasına olursa olsun kazanmak ya da kaybetmenin acısını simgeler. Bir çatışmada galip gelmek mümkün olsa da geriye kalan zarar ilişkiyi zedeler. Neyi kazanıp neyi kaybettiğini dürüstçe değerlendir.',
+    reversedMeaning: 'Geçmişteki bir çatışmayla yüzleşme ya da pişmanlık. Uzlaşma ve barış aramanın zamanı. Eski yaraları sarmak için adım atmaya hazırsın.'
+  },
+  {
+    id: 55, name: 'Kılıçların Altısı', en: 'Six of Swords', suit: 'swords',
+    img: 'images/swords06.jpg',
+    keywords: ['Geçiş', 'İyileşme', 'Uzaklaşmak', 'İlerleme'],
+    meaning: 'Kılıçların Altısı, zorlu bir dönemden daha sakin sulara doğru yapılan geçişi simgeler. Geride bıraktıklarının izleri hâlâ var ama artık ileriye doğru yol alıyorsun. Geçiş hem fiziksel hem zihinsel olabilir.',
+    reversedMeaning: 'Geçişi zorlaştıran direniş ya da geri dönme isteği. Bilinçsizce eski sorunları yanında taşıyor olabilirsin. Bırakmadan ilerleyemezsin.'
+  },
+  {
+    id: 56, name: 'Kılıçların Yedisi', en: 'Seven of Swords', suit: 'swords',
+    img: 'images/swords07.jpg',
+    keywords: ['Aldatma', 'Strateji', 'Kaçış', 'Gizlilik'],
+    meaning: 'Kılıçların Yedisi, gizli planları, taktiksel geri çekilmeleri ya da aldatıcı davranışları simgeler. Birinin dürüst olmadığını sezebilirsin ya da kendin bir şeyi açık etmekten kaçınıyorsundur. Dikkatli ol.',
+    reversedMeaning: 'Gizlenen bir gerçeğin yüzeye çıkması ya da aldatmacayı fark etme. Dürüstlüğe dönme zamanı; gizliden ilerlemek artık işe yaramıyor.'
+  },
+  {
+    id: 57, name: 'Kılıçların Sekizi', en: 'Eight of Swords', suit: 'swords',
+    img: 'images/swords08.jpg',
+    keywords: ['Tuzak', 'Kısıtlama', 'Çaresizlik', 'Zihinsel baskı'],
+    meaning: 'Kılıçların Sekizi, büyük ölçüde kendi zihnimizin yarattığı bir hapishane içinde hissetmeyi simgeler. Bağlar gerçek gibi görünse de kafandaki sınırlamalar asıl kısıtlayan. Gözlerini aç; kaçış yolu düşündüğünden yakın.',
+    reversedMeaning: 'Zihinsel baskıdan kurtulma ve sınırlamalardan sıyrılma süreci başlıyor. Kendi koyduğun duvarların farkına varıyorsun. Özgürlük içeriden geliyor.'
+  },
+  {
+    id: 58, name: 'Kılıçların Dokuzu', en: 'Nine of Swords', suit: 'swords',
+    img: 'images/swords09.jpg',
+    keywords: ['Kaygı', 'Kabus', 'Pişmanlık', 'Zihinsel yük'],
+    meaning: 'Kılıçların Dokuzu, uykusuz geceleri, aşırı düşünmeyi ve kaygıyla boğuşmayı simgeler. Zihinsel acılar genellikle olduğundan büyük görünür. Bu karanlık geçecek; biriyle konuşmak ya da yardım istemek zayıflık değildir.',
+    reversedMeaning: 'Kaygı ve korkuların yavaş yavaş dağıldığını hissediyorsun. En kötüsünü geride bırakıyorsun. Yeni bir perspektifle bakabiliyorsun.'
+  },
+  {
+    id: 59, name: 'Kılıçların Onu', en: 'Ten of Swords', suit: 'swords',
+    img: 'images/swords10.jpg',
+    keywords: ['Son', 'Yenilgi', 'Kriz', 'Yeni başlangıç'],
+    meaning: 'Kılıçların Onu, zorlu bir dönemin en dip noktasını simgeler; ama her son yeni bir başlangıcın habercisidir. Artık daha aşağı inemezsin; bu, bir şeylerin sona erdiği ama yeni bir sayfanın açıldığı andır.',
+    reversedMeaning: 'Felaketten kurtulma ve yenilenme süreci başlıyor. En zor kısım geçti; bu deneyimden güçlenmiş olarak çıkıyorsun.'
+  },
+  {
+    id: 60, name: 'Kılıçların Paçı', en: 'Page of Swords', suit: 'swords',
+    img: 'images/swords11.jpg',
+    keywords: ['Merak', 'Zekâ', 'Haberci', 'Keskinlik'],
+    meaning: 'Kılıçların Paçı, keskin zekâlı, meraklı ve gözlemci bir enerjiyi simgeler. Yeni fikirler, haberler ya da tartışmalar gündemde. Gerçeği araştırma isteğin güçlü ama sabırsızlıktan kaçın.',
+    reversedMeaning: 'Düşüncesiz konuşmalar, dedikodu ya da abartılı eleştiriler söz konusu olabilir. Kırıcı olmadan dürüst olunabilir; sözcüklerin gücünü hafife alma.'
+  },
+  {
+    id: 61, name: 'Kılıçların Şövalyesi', en: 'Knight of Swords', suit: 'swords',
+    img: 'images/swords12.jpg',
+    keywords: ['Hız', 'Kararlılık', 'Cesaret', 'Dürtüsel hareket'],
+    meaning: 'Kılıçların Şövalyesi, büyük bir hızla harekete geçen, cesur ve kararlı bir enerjiyi simgeler. Doğru olanı söylemek ve savunmaktan çekinmiyorsun. Ama hızın seni düşüncesizliğe sürüklemesin.',
+    reversedMeaning: 'Saldırganlık, çok hızlı hareket etme ya da başkalarını dinlememe. Düşünceli olmadan ileri atılmak zarar verebilir. Frene bas.'
+  },
+  {
+    id: 62, name: 'Kılıçların Kraliçesi', en: 'Queen of Swords', suit: 'swords',
+    img: 'images/swords13.jpg',
+    keywords: ['Bağımsızlık', 'Keskinlik', 'Dürüstlük', 'Netlik'],
+    meaning: 'Kılıçların Kraliçesi, keskin zekâlı, dürüst ve bağımsız bir enerjiyi temsil eder. Duygulardan etkilenmeden net bir şekilde değerlendirebiliyorsun. Gerçeği söylemek ve sınır koymak konusunda kararlısın.',
+    reversedMeaning: 'Soğukluk, acımasızlık ya da duygusal uzaklaşma. Zekânı kalkan olarak kullanıyor, gerçek bağlantıdan kaçıyor olabilirsin.'
+  },
+  {
+    id: 63, name: 'Kılıçların Kralı', en: 'King of Swords', suit: 'swords',
+    img: 'images/swords14.jpg',
+    keywords: ['Otorite', 'Adalet', 'Akıl', 'Etik'],
+    meaning: 'Kılıçların Kralı, adaletli, akılcı ve etik ilkeler doğrultusunda hareket eden güçlü bir enerjiyi temsil eder. Karmaşık durumları net bir zihinle değerlendirip doğru kararlar alabilirsin. Gerçek ve adalet rehberin.',
+    reversedMeaning: 'Baskıcı otorite, manipülatif mantık ya da adaletsiz kararlar söz konusu olabilir. Güç, insanları yönetmek için değil, doğruyu korumak için kullanılmalı.'
+  },
+
+  // --- MINOR ARCANA: DISKLER (PENTACLES) ---
+  {
+    id: 64, name: 'Disklerin Ası', en: 'Ace of Pentacles', suit: 'pentacles',
+    img: 'images/pents01.jpg',
+    keywords: ['Fırsat', 'Bolluk', 'Maddi başlangıç', 'Güvenlik'],
+    meaning: 'Disklerin Ası, maddi ya da profesyonel alanda yeni ve verimli bir başlangıcı simgeler. İş teklifi, finansal fırsat ya da somut bir proje kapıda. Elindeki kaynakları akıllıca kullanarak temeli sağlam at.',
+    reversedMeaning: 'Maddi fırsatı kaçırmak ya da mali konularda ihtiyatsız davranmak. Paranındaki ya da kariyerindeki bir güvensizlik endişe yaratıyor.'
+  },
+  {
+    id: 65, name: 'Disklerin İkisi', en: 'Two of Pentacles', suit: 'pentacles',
+    img: 'images/pents02.jpg',
+    keywords: ['Denge', 'Çoklu görev', 'Esneklik', 'Adaptasyon'],
+    meaning: 'Disklerin İkisi, hayatın farklı alanlarını dengede tutmaya çalışmayı simgeler. Birden fazla sorumluluk ya da öncelik arasında gidip geliyorsun. Esneklik ve mizah dengeyi korumanın anahtarı.',
+    reversedMeaning: 'Dengesizlik ve kapasitenin üzerinde yüklenme. Bir şeyler elden kayıyor; öncelikleri yeniden belirlemeniz gerekiyor.'
+  },
+  {
+    id: 66, name: 'Disklerin Üçü', en: 'Three of Pentacles', suit: 'pentacles',
+    img: 'images/pents03.jpg',
+    keywords: ['Ekip çalışması', 'Ustalık', 'Planlama', 'İşbirliği'],
+    meaning: 'Disklerin Üçü, farklı yeteneklerin bir araya gelerek yarattığı güçlü işbirliğini simgeler. Ekip halinde çalışmak ya da bir ustanın rehberliğinde öğrenmek bu dönemde sana çok şey kazandırır.',
+    reversedMeaning: 'Ekip içi uyumsuzluk, süreci baltalayan ego ya da işbirliğinin zorlandığı bir ortam. Herkes kendi yolunu çiziyor ve ortak hedef kayboluyor.'
+  },
+  {
+    id: 67, name: 'Disklerin Dördü', en: 'Four of Pentacles', suit: 'pentacles',
+    img: 'images/pents04.jpg',
+    keywords: ['Güvenlik', 'Tutumlu olmak', 'Kontrol', 'Koruma'],
+    meaning: 'Disklerin Dördü, kazanılanı koruma ve güvence altına alma isteğini simgeler. Finansal güvenlik önemlidir; ama aşırı tutumlu olmak ya da kaybetme korkusunun yönetmesine izin vermek seni sınırlayabilir.',
+    reversedMeaning: 'Cömertleşme ya da paranın yönettiği bir hayat tarzından kurtulma başlıyor. Ya da kontrolünü kaybettiğini hissedip sıkı tutmaya çalışıyorsun.'
+  },
+  {
+    id: 68, name: 'Disklerin Beşi', en: 'Five of Pentacles', suit: 'pentacles',
+    img: 'images/pents05.jpg',
+    keywords: ['Maddi zorluk', 'Yalnızlık', 'Yoksunluk', 'Sıkıntı'],
+    meaning: 'Disklerin Beşi, mali güçlük ya da dışlanmışlık hissini simgeler. Zor bir dönemden geçiyor olabilirsin; ama yardım kapıda, görmeyi seçmen yeterli. Yalnız değilsin.',
+    reversedMeaning: 'Zorlu bir dönemden çıkmaya başlamak. Yardım kabul etmeye ya da durumu iyileştirmeye hazırsın. İlk adımlar atılıyor.'
+  },
+  {
+    id: 69, name: 'Disklerin Altısı', en: 'Six of Pentacles', suit: 'pentacles',
+    img: 'images/pents06.jpg',
+    keywords: ['Cömertlik', 'Denge', 'Verme-alma', 'Paylaşım'],
+    meaning: 'Disklerin Altısı, kaynakların adil biçimde paylaşılmasını ve yardımlaşmanın gücünü simgeler. Bir dönem veren, bir dönem alan taraf olabilirsin. Cömertlik döngüsel bir güçtür.',
+    reversedMeaning: 'Eşitsiz güç dengesi ya da beklentiyle yapılan yardım. Yardım ederken kontrolcü ya da başkasına aşırı bağımlı hissedebilirsin.'
+  },
+  {
+    id: 70, name: 'Disklerin Yedisi', en: 'Seven of Pentacles', suit: 'pentacles',
+    img: 'images/pents07.jpg',
+    keywords: ['Sabır', 'Değerlendirme', 'Uzun vadeli vizyon', 'Bekleme'],
+    meaning: 'Disklerin Yedisi, uzun süre emek verilen bir şeyin meyvelerini bekleme anını simgeler. Hemen sonuç gelmeyebilir; ama sabreden elde ediyor. Bu duraksama, ilerlemenin değerini ölçme anıdır.',
+    reversedMeaning: 'Çabalar karşılıksız kalıyor ya da sabırsızlık kötü kararlar aldırıyor. Yatırılan emeğin geri dönüşü görünmüyor; stratejiyi gözden geçir.'
+  },
+  {
+    id: 71, name: 'Disklerin Sekizi', en: 'Eight of Pentacles', suit: 'pentacles',
+    img: 'images/pents08.jpg',
+    keywords: ['Ustalık', 'Öğrenme', 'Çalışkanlık', 'Gelişim'],
+    meaning: 'Disklerin Sekizi, bir işte ya da alanda ustalaşmak için gösterilen özveriyi ve titizliği simgeler. Tekrar tekrar pratik yaparak mükemmelleşiyorsun. Bu dönem kariyer ya da kişisel gelişimde önemli ilerlemeler vaat ediyor.',
+    reversedMeaning: 'İşi yarıda bırakma, öğrenmeden kaçma ya da mükemmeliyetçilik tuzağına düşme. Çaba var ama yön ya da motivasyon eksik.'
+  },
+  {
+    id: 72, name: 'Disklerin Dokuzu', en: 'Nine of Pentacles', suit: 'pentacles',
+    img: 'images/pents09.jpg',
+    keywords: ['Bağımsızlık', 'Başarı', 'Öz yeterlilik', 'Lüks'],
+    meaning: 'Disklerin Dokuzu, kendi emeğiyle kazanılan refahı ve özgürlüğü simgeler. Kendi ayakları üzerinde duran, maddi açıdan güvende ve kendisiyle barışık bir dönemin içindesin. Bu başarını kutla.',
+    reversedMeaning: 'Bağımsızlığı riske atan kararlar ya da maddi güvenliği tehdit eden durumlar. Ya da sahip olduklarına rağmen içten bir boşluk hissediyorsun.'
+  },
+  {
+    id: 73, name: 'Disklerin Onu', en: 'Ten of Pentacles', suit: 'pentacles',
+    img: 'images/pents10.jpg',
+    keywords: ['Miras', 'Aile zenginliği', 'Kalıcılık', 'Uzun vadeli güvenlik'],
+    meaning: 'Disklerin Onu, nesiller boyunca aktarılan bir zenginliği, güvenli bir aile ortamını ve uzun vadeli refahı simgeler. Kurduğun şeyler kalıcı; bu bolluk sadece para değil, sevgi ve güven de içeriyor.',
+    reversedMeaning: 'Aile içi gerilim ya da mirasla ilgili anlaşmazlıklar. Uzun vadeli güvenlik tehdit altında ya da kuşaklar arası kopukluk var.'
+  },
+  {
+    id: 74, name: 'Disklerin Paçı', en: 'Page of Pentacles', suit: 'pentacles',
+    img: 'images/pents11.jpg',
+    keywords: ['Öğrenme', 'Planlama', 'Yeni beceri', 'Pratiklik'],
+    meaning: 'Disklerin Paçı, yeni bir alanda öğrenmeye başlama ve hayalleri somut adımlara dönüştürme enerjisini simgeler. Bir eğitim, yeni bir iş ya da pratik bir proje için atılan ilk adımlar meyve verecek.',
+    reversedMeaning: 'Hayaller var ama plan yok. Başlamak için gereken somut adım atılamıyor. Öğrenme süreci gecikiyor ya da dikkat dağınık.'
+  },
+  {
+    id: 75, name: 'Disklerin Şövalyesi', en: 'Knight of Pentacles', suit: 'pentacles',
+    img: 'images/pents12.jpg',
+    keywords: ['Çalışkanlık', 'Sabır', 'Güvenilirlik', 'Kararlılık'],
+    meaning: 'Disklerin Şövalyesi, yavaş ama emin adımlarla, azimle ve güvenilirlikle ilerleyen bir enerjiyi simgeler. Hızlı değil ama istikrarlısın. Verilen sözler tutulur; bu dönemde emek en büyük silahın.',
+    reversedMeaning: 'Monotonluk ya da değişime karşı direnç. Aşırı ihtiyatlılık ilerlemeyi yavaşlatıyor. Ya da rutin dışına çıkma korkusunu yeniyorsun.'
+  },
+  {
+    id: 76, name: 'Disklerin Kraliçesi', en: 'Queen of Pentacles', suit: 'pentacles',
+    img: 'images/pents13.jpg',
+    keywords: ['Pratiklik', 'Şefkat', 'Bolluk', 'Güvenlik'],
+    meaning: 'Disklerin Kraliçesi, hem pratik hem şefkatli, hem güvenli hem de cömert bir enerjiyi temsil eder. Çevrendekilere hem maddi hem duygusal destek sunuyorsun. Ev, aile ve sağlık konularında güçlü bir dönem.',
+    reversedMeaning: 'Maddi kaygılar ya da öz bakımın ihmal edilmesi. Herkese bakan ama kendisine bakamayan bir enerji. Sınırlarını belirle.'
+  },
+  {
+    id: 77, name: 'Disklerin Kralı', en: 'King of Pentacles', suit: 'pentacles',
+    img: 'images/pents14.jpg',
+    keywords: ['Başarı', 'Güvenilirlik', 'Liderlik', 'Maddi güç'],
+    meaning: 'Disklerin Kralı, çalışkanlık ve azimle kazanılmış maddi gücü ve olgun bir liderliği temsil eder. Finansal ve pratik konularda güvenilir bir rehbersin. Yatırımlar ve uzun vadeli planlama konusunda sağlam kararlar verebilirsin.',
+    reversedMeaning: 'Maddi güce aşırı odaklanma, açgözlülük ya da güvenilmezlik. Para ve güç amaca değil araca dönüşmüş. Değerlerini yeniden gözden geçir.'
   }
 ];
 
