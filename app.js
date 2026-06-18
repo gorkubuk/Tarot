@@ -708,7 +708,7 @@ function startSpread() {
 
 function resetSpread() {
   pickedCards = [];
-  pickDeck = shuffle(CARDS.filter(c => !c.suit)).map(c => ({ ...c, isReversed: Math.random() < 0.33 }));
+  pickDeck = shuffle(CARDS).map(c => ({ ...c, isReversed: Math.random() < 0.33 }));
 
   document.getElementById('spread-pick-phase').style.display = 'flex';
   document.getElementById('spread-reveal-phase').style.display = 'none';
