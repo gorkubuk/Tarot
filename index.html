@@ -245,6 +245,14 @@
     <div class="back-btn" onclick="goHome()">← Geri</div>
     <div class="dict-content">
         <div class="dict-title">Kart Sözlüğü</div>
+        <div class="dict-filters">
+            <button class="dict-filter active" onclick="filterDict('', this)">Tümü</button>
+            <button class="dict-filter" onclick="filterDict('major', this)">Major Arcana</button>
+            <button class="dict-filter" onclick="filterDict('cups', this)">Kadehler</button>
+            <button class="dict-filter" onclick="filterDict('wands', this)">Asalar</button>
+            <button class="dict-filter" onclick="filterDict('swords', this)">Kılıçlar</button>
+            <button class="dict-filter" onclick="filterDict('pentacles', this)">Diskler</button>
+        </div>
         <div class="dict-grid" id="dict-grid"></div>
     </div>
 </div>
