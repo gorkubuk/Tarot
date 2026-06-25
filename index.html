@@ -1,10 +1,50 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarot</title>
+    <title>Tarot Falı Bak | Ücretsiz Online Türkçe Tarot | Tarotum</title>
+    <meta name="description" content="Ücretsiz online tarot falı bakın. Günlük kart çekimi, üç kart yayılımı, Celtic Cross ve 78 kart sözlüğü. Türkçe yorumlarla günlük rehberlik alın.">
+    <meta name="keywords" content="tarot falı, tarot kartları, online tarot, günlük tarot, ücretsiz tarot, türkçe tarot, celtic cross tarot, major arcana, tarot sözlüğü">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tarotum.com.tr/">
+
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tarotum.com.tr/">
+    <meta property="og:title" content="Tarot Falı Bak | Ücretsiz Online Türkçe Tarot">
+    <meta property="og:description" content="Ücretsiz online tarot falı bakın. Günlük kart çekimi, üç kart yayılımı, Celtic Cross ve 78 kart sözlüğü.">
+    <meta property="og:image" content="https://tarotum.com.tr/images/19_sun.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Tarotum">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tarot Falı Bak | Ücretsiz Online Türkçe Tarot">
+    <meta name="twitter:description" content="Ücretsiz online tarot falı bakın. Günlük kart çekimi, üç kart yayılımı, Celtic Cross ve 78 kart sözlüğü.">
+    <meta name="twitter:image" content="https://tarotum.com.tr/images/19_sun.jpg">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Yapısal Veri -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Tarotum",
+      "url": "https://tarotum.com.tr",
+      "description": "Ücretsiz online tarot falı uygulaması. Günlük kart çekimi, üç kart yayılımı, Celtic Cross ve 78 kart sözlüğü.",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "tr-TR",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      }
+    }
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-97CVQNDJJR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -20,8 +60,8 @@
 <!-- Ana ekran -->
 <div id="main-screen" class="screen active">
     <div class="main-content">
-        <div class="logo">✦ TAROT ✦</div>
-        <div class="tagline">kartlar seni bekliyor</div>
+        <h1 class="logo">✦ TAROT ✦</h1>
+        <p class="tagline">kartlar seni bekliyor</p>
         <div class="btn-group">
             <button class="btn-primary" onclick="startDaily()">☽ Günlük Kartım</button>
             <button class="btn-secondary" onclick="startSingle()">Tek Kart Çek</button>
@@ -251,7 +291,7 @@
 <div id="dict-screen" class="screen">
     <div class="back-btn" onclick="goHome()">← Geri</div>
     <div class="dict-content">
-        <div class="dict-title">Kart Sözlüğü</div>
+        <h2 class="dict-title">Kart Sözlüğü</h2>
         <div class="dict-filters">
             <button class="dict-filter active" onclick="filterDict('major', this)">Major Arcana</button>
             <button class="dict-filter" onclick="filterDict('cups', this)">Kadehler</button>
@@ -286,3 +326,4 @@
 <script src="app.js"></script>
 </body>
 </html>
+
